@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="点点滴滴，常用于表示这种很少的事物的不断积累，强调渐进的过程，具有量变性。"><title>CaseStudy的意义及规范 | 点点滴滴</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/7.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">CaseStudy的意义及规范</h1><a id="logo" href="/.">点点滴滴</a><p class="description">点点技术、滴滴生活</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">CaseStudy的意义及规范</h1><div class="post-meta">Jul 5, 2018</div><div class="post-content"><p>CaseStudy，让人比较讨厌的一个词，因为如果它出现了，那就是出事故了，接下来就会面临定级，影响到KPI，哈哈。</p>
+<p>虽然让人讨厌，但是却是不能缺少的，而且意义还很重大：</p>
+<p>CaseStudy的主要目的不是为了降低某个人的绩效，也不是追究谁的锅（当然，最后锅还是要有人背的哈），而是通过案例的研究，一步步复现问题发生的过程，从而制定一系列的规范，避免类似事故再次发生。</p>
+<p>那么如何正确的CaseStudy、正确制定规范避免类似事故呢？</p>
+<p>以下均为个人观点（不同意也没办法，不提供留言讨论功能）：</p>
+<h3 id="事故描述"><a href="#事故描述" class="headerlink" title="事故描述"></a>事故描述</h3><p>详细的描述事故发送的过程。什么时间？做了什么事情？由于什么原因？导致了什么结果？进而影响到了什么？最终造成什么结果？<br>例如：2018年7月5号下午15点30分，上线了一篇新文章，由于在创建文章的时候，误删除了一篇现有文章，发版后，导致了线上文章被删除。进而影响到了用户的阅读，最终造成用户体验下降，影响品牌形象。</p>
+<h3 id="事故相关人"><a href="#事故相关人" class="headerlink" title="事故相关人"></a>事故相关人</h3><p>责任人：XXX<br>处理人：XXX<br>责任人即谁做了操作影响到结果。处理人则为跟着一起排查问题，解决问题（一般线上出问题，都比较蒙圈，赶紧找有交集的人一起帮忙分析）。</p>
+<h3 id="事故定级"><a href="#事故定级" class="headerlink" title="事故定级"></a>事故定级</h3><p>定级是为了有标准来衡量事故的严重性。比如你也发生线上事故，我也发生线上事故，那怎么来衡量谁的严重，谁的KPI低呢？<br>可以从几个维度来分析：</p>
+<ol>
+<li>影响到的用户数</li>
+<li>影响到的订单数||交易额||数据错误额度||各种指标等等</li>
+<li>问题解决的时长</li>
+</ol>
+<p>可根据业务自身特点来定制维度。并且在维度的基础上，划分范围来定级。例如：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">维度</th>
+<th style="text-align:left">范围</th>
+<th style="text-align:left">定级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">影响到用户数</td>
+<td style="text-align:left">1000以上</td>
+<td style="text-align:left">S1</td>
+</tr>
+<tr>
+<td style="text-align:left">影响到用户数</td>
+<td style="text-align:left">500~1000</td>
+<td style="text-align:left">S2</td>
+</tr>
+<tr>
+<td style="text-align:left">影响到用户数</td>
+<td style="text-align:left">100~500</td>
+<td style="text-align:left">S3</td>
+</tr>
+<tr>
+<td style="text-align:left">影响到用户数</td>
+<td style="text-align:left">小于100</td>
+<td style="text-align:left">S4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="事故影响范围"><a href="#事故影响范围" class="headerlink" title="事故影响范围"></a>事故影响范围</h3><ul>
+<li>修复数据N条</li>
+<li>影响用户N个</li>
+<li>影响交易额N个亿（可以走人了）</li>
+<li>影响订单量几千万（终身免费打工吧）</li>
+<li>系统24小时无法访问（着急了吧）</li>
+<li>等等，看具体业务（开发有风险，入行请谨慎）</li>
+</ul>
+<h3 id="问题处理过程"><a href="#问题处理过程" class="headerlink" title="问题处理过程"></a>问题处理过程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">详细描述问题处理的过程，尽量的细化，到分钟级别。例如：</span><br><span class="line"></span><br><span class="line">yyyymmdd HH:ss 谁跟谁反馈了什么问题？</span><br><span class="line">yyyymmdd HH:ss 谁找到了谁发现了什么异常？</span><br><span class="line">yyyymmdd HH:ss 谁开始排查？</span><br><span class="line">yyyymmdd HH:ss 又遇到了什么难题？</span><br><span class="line">yyyymmdd HH:ss 再找到谁分析？</span><br><span class="line">yyyymmdd HH:ss …………此处省略若干行，希望快点定位到问题吧。</span><br><span class="line">yyyymmdd HH:ss 最终确定哪出了问题？</span><br><span class="line">yyyymmdd HH:ss 谁想到了补救方案？</span><br><span class="line">yyyymmdd HH:ss 谁开始执行？</span><br><span class="line">yyyymmdd HH:ss 谁跟着确认？</span><br><span class="line">yyyymmdd HH:ss 什么环境验证结果？</span><br><span class="line">yyyymmdd HH:ss 谁准备上线？</span><br><span class="line">yyyymmdd HH:ss 线上验证结果？</span><br><span class="line">yyyymmdd HH:ss 整体解决完成？</span><br></pre></td></tr></table></figure>
+<h3 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h3><p>原因分析，就需要多问几个为什么？</p>
+<ol>
+<li>为什么此次升级会造成现有文章丢失？<br>因为此次升级是为了添加一篇新的文章，在创建新文章时，由于程序员误操作，导致删除了之前的文章。</li>
+<li>为什么新建文章会删除旧文章？<br>因为创建文章时，敲错了命令，导致现有文章被删除。</li>
+<li>为什么删除没有确认操作？<br>框架没有提供确认操作。。。</li>
+<li>为什么上线前没有review？<br>一个人负责该项目，没有同伴review。</li>
+</ol>
+<p>示例纯属扯淡，不要参考。一定要认真写问题的原因，做到真实、客观。</p>
+<h3 id="事故总结"><a href="#事故总结" class="headerlink" title="事故总结"></a>事故总结</h3><ol>
+<li>对业务熟悉程度不够。</li>
+<li>对框架使用不深入。</li>
+<li>对某某环境了解甚浅。</li>
+<li>对XX系统重视不足。</li>
+<li>对什么流程操作不规范。</li>
+</ol>
+<p>对于某一项，都要展开来说。比如为什么操作流程不规范？是因为之前没有规范？还是由于新人入职，了解不够？还是规范有修改，信息未同步？等等等等。</p>
+<h3 id="后续改进"><a href="#后续改进" class="headerlink" title="后续改进"></a>后续改进</h3><p>重点来了！级也定了（锅也背了）、原因也分析了、事故也总结了。该想想如何改进，不再犯同样的错了。<br>比如可以整理一个TODO LIST：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">改进点</th>
+<th style="text-align:left">负责人</th>
+<th style="text-align:left">完成时间</th>
+<th style="text-align:left">当前状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">熟悉开发规范</td>
+<td style="text-align:left">张三</td>
+<td style="text-align:left">2月31号</td>
+<td style="text-align:left">已完成</td>
+</tr>
+<tr>
+<td style="text-align:left">梳理上线流程</td>
+<td style="text-align:left">李四</td>
+<td style="text-align:left">2月31号</td>
+<td style="text-align:left">已完成</td>
+</tr>
+<tr>
+<td style="text-align:left">制定checklist</td>
+<td style="text-align:left">王五</td>
+<td style="text-align:left">2月31号</td>
+<td style="text-align:left">已完成</td>
+</tr>
+<tr>
+<td style="text-align:left">实施review机制</td>
+<td style="text-align:left">赵六</td>
+<td style="text-align:left">2月31号</td>
+<td style="text-align:left">进行中</td>
+</tr>
+<tr>
+<td style="text-align:left">接入自动化测试</td>
+<td style="text-align:left">周七</td>
+<td style="text-align:left">2月31号</td>
+<td style="text-align:left">进行中</td>
+</tr>
+<tr>
+<td style="text-align:left">完善回滚机制</td>
+<td style="text-align:left">吴八</td>
+<td style="text-align:left">2月31号</td>
+<td style="text-align:left">进行中</td>
+</tr>
+</tbody>
+</table>
+<h3 id="总之："><a href="#总之：" class="headerlink" title="总之："></a>总之：</h3><p>CaseStudy不是写在这儿就完了，要切实改进流程，避免事故再犯，改进点不要太泛，一定要落实到具体人，并且可操作、可执行、有结果。</p>
+</div><div class="tags"><a href="/tags/casestudy/">casestudy</a></div><div class="post-nav"><a class="pre" href="/2019/03/04/PRD输出规范/">PRD输出规范</a><a class="next" href="/2018/04/18/面试不要表现的那么low/">面试不要表现的那么low</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/总结/">总结</a><span class="category-list-count">2</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/PM/" style="font-size: 15px;">PM</a> <a href="/tags/PRD/" style="font-size: 15px;">PRD</a> <a href="/tags/casestudy/" style="font-size: 15px;">casestudy</a> <a href="/tags/晋升答辩/" style="font-size: 15px;">晋升答辩</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/03/04/PRD输出规范/">PRD输出规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/05/CaseStudy的意义及规范/">CaseStudy的意义及规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/18/面试不要表现的那么low/">面试不要表现的那么low</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/11/关于职级晋升答辩的感悟/">关于职级晋升答辩的感悟</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.hongliang.org" title="hongliang.org" target="_blank">hongliang.org</a><ul></ul><a href="http://jslib.hongliang.org" title="js常用方法" target="_blank">js常用方法</a><ul></ul><a href="http://console.hongliang.org" title="JS日志查看工具" target="_blank">JS日志查看工具</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">点点滴滴.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = '//hm.baidu.com/hm.js?2e97cb305b0242a9385ed1fa6b50561e';
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
